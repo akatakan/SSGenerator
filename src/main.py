@@ -9,11 +9,11 @@ dir_path_content = "./content"
 template_path = "./template.html"
 
 def clean_public_folder():
-    if os.path.exists("./public"):
-        shutil.rmtree("./public")
+    if os.path.exists(dir_path_public):
+        shutil.rmtree(dir_path_public)
         
 def static_to_public():
-    copy_file("./static","./public")
+    copy_file(dir_path_static,dir_path_public)
     
 def copy_file(src,dest):
     if not os.path.exists(dest):
